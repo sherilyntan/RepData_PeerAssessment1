@@ -2,7 +2,7 @@
 title: "Reproducible Research: Peer Assessment 1"
 author: "Sherilyn"
 date: "17 May 2017"
-output:  html_document
+output:  md_document
    
 ---
 
