@@ -157,7 +157,16 @@ library(dplyr)</code></pre>
 ##     date</code></pre>
 <pre class="r"><code>library(knitr)
 setwd(&quot;c:/coursera&quot;)
-activity &lt;- read.csv(&quot;activity.csv&quot;)</code></pre>
+activity &lt;- read.csv(&quot;activity.csv&quot;)
+
+# define paths
+base.dir &lt;- setwd(&quot;c:/coursera&quot;)
+base.url &lt;- &quot;/&quot;
+fig.path &lt;- &quot;projects/figure/&quot;
+
+# this is where figures will be sent
+paste0(base.dir, fig.path)</code></pre>
+<pre><code>## [1] &quot;c:/courseraprojects/figure/&quot;</code></pre>
 <p>Make a histogram on total number of steps per day</p>
 <pre class="r"><code>aggsteps&lt;-aggregate(steps~date, data=activity, FUN = sum)
 hist(aggsteps$steps,xlab = &quot;Number of steps&quot;, main = &quot;Total Number of steps per day&quot;)</code></pre>
