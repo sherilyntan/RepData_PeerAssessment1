@@ -45,18 +45,8 @@ Loading and preprocessing the data
     ##     date
 
     library(knitr)
-    setwd("c:/coursera")
+    setwd("c:/courseraprojects")
     activity <- read.csv("activity.csv")
-
-    # define paths
-    base.dir <- setwd("c:/coursera")
-    base.url <- "/"
-    fig.path <- "projects/figure/"
-
-    # this is where figures will be sent
-    paste0(base.dir, fig.path)
-
-    ## [1] "c:/courseraprojects/figure/"
 
 Make a histogram on total number of steps per day
 
