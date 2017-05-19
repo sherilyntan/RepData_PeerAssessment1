@@ -2,11 +2,13 @@
 title: "Reproducible Research: Peer Assessment 1"
 author: "Sherilyn"
 date: "17 May 2017"
-output: html_document
+output:  md_document
+   
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
 ```
 
 
@@ -20,6 +22,14 @@ library (lubridate)
 library(knitr)
 setwd("c:/coursera")
 activity <- read.csv("activity.csv")
+
+# define paths
+base.dir <- setwd("c:/coursera")
+base.url <- "/"
+fig.path <- "projects/figure/"
+
+# this is where figures will be sent
+paste0(base.dir, fig.path)
 
 ```
 
