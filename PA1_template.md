@@ -53,7 +53,7 @@ Make a histogram on total number of steps per day
     aggsteps<-aggregate(steps~date, data=activity, FUN = sum)
     hist(aggsteps$steps,xlab = "Number of steps", main = "Total Number of steps per day")
 
-![](PA1_template_files/figure-markdown_strict/unnamed-chunk-1-1.png)
+![](PA1_template_files/figure-markdown_strict/unnamed-chunk-1-1.png?raw=true)
 
 Calculate and report the mean and median total number of steps taken per
 day
@@ -79,7 +79,7 @@ number of steps taken, averaged across all days (y-axis)
     ggplot(data = averages, aes(x = interval, y = steps)) + geom_line() + xlab("5-minute interval") + 
             ylab("average number of steps taken")
 
-![](PA1_template_files/figure-markdown_strict/unnamed-chunk-4-1.png)
+![](PA1_template_files/figure-markdown_strict/unnamed-chunk-4-1.png?raw=true)
 
 Which 5-minute interval, on average across all the days in the dataset,
 contains the maximum number of steps?
@@ -116,7 +116,7 @@ calculate the mean and median total number of steps.
     total.steps <- tapply(filled.data$steps, filled.data$date, FUN = sum)
     qplot(total.steps, binwidth = 1000, xlab = "total number of steps taken each day")
 
-![](PA1_template_files/figure-markdown_strict/unnamed-chunk-8-1.png)
+![](PA1_template_files/figure-markdown_strict/unnamed-chunk-8-1.png?raw=true)
 
     mean(total.steps)
 
@@ -145,4 +145,4 @@ weekdays and weekends.
     ggplot(averages, aes(interval, steps)) + geom_line() + facet_grid(day ~ .) + 
             xlab("5-minute interval") + ylab("Number of steps")
 
-![](PA1_template_files/figure-markdown_strict/unnamed-chunk-10-1.png)
+![](PA1_template_files/figure-markdown_strict/unnamed-chunk-10-1.png?raw=true)
